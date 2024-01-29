@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginform.css">
+    <title>Login Form</title>
+</head>
+<body>
+    <div class="background">
+        <div class="booking-form">
+          
+            <button class="signup" onclick="goToAnotherPage()">GO BACK</button>
+            <h2>SignUp Form</h2>
+           
+            <form action="welcomeform.html" method="post" class="loginForm" name="form" onsubmit="return validated()">
+                <label for="name">Username:</label>
+                 <input type="text" name="name" id="name" autocomplete="off">
+
+                 <div id="email_error">Please Fill up The Username and should be 4 characters</div>
+
+               <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+
+                <div id="password_error">Please Fill up your Password and should be 4 characters  </div>
+                <label for="email" >Email</label>
+                <input type="email" name="email" required pattern="/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/" id="email" type="text">
+
+                <button type="submit" class="login">SignUp</button>
+               
+                <!-- <button> Sign Up</button>
+                <button>Forgot Password</button> -->
+                 <p id="result"></p>
+                </form>
+                <script>
+                    function goToAnotherPage() {
+                        window.location.href = 'loginForm.html';  
+                    }
+                </script>
+                <script src="login.js"></script>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginform.css">
+    <title>Login Form</title>
+</head>
+<body>
+    <div class="background">
+        <div class="booking-form">
+            <p>Don't have an account?</p> 
+            <button class="signup" onclick="goToAnotherPage()">SignUp</button>
+            <h2>Login Form</h2>
+            <form action="home.html" method="post" class="loginForm" name="form" onsubmit="return validated()">
+                <label for="name">Username or Email:</label>
+                 <input type="text" name="name" id="name" autocomplete="off">
+
+                 <div id="email_error">Please Fill up your Username or Email</div>
+
+               <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+
+                <div id="password_error">Please Fill up your Password </div>
+               
+                <button type="submit" class="login">Login</button>
+               
+                <!-- <button> Sign Up</button>
+                <button>Forgot Password</button> -->
+                 <p id="result"></p>
+                </form>
+                <button class="Forgotpassword"  onclick="goToForgotPassword()"> Forgot Password?</button>
+                <script>
+                   function goToForgotPassword(){
+                    window.location.href='forgotPassword.html';
+                   }
+                </script>
+                <script>
+                    function goToAnotherPage() {
+                        window.location.href = 'signup.html';  
+                    }
+                </script>
+                <script src="login.js"></script>
+        </div>
+    </div>
+</body>
+</html>
